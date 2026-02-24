@@ -1,0 +1,145 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MainApp());
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    const String appTitle = 'Flutter layout demo';
+    return MaterialApp(
+      title: appTitle,
+      home: Scaffold(
+        appBar: AppBar(),
+        body: const Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Icon(Icons.arrow_back, 
+                  color: Colors.blue, 
+                  size: 30),
+                  Text("Aplicacion de Flutter"),
+                  Icon(
+                    Icons.star,
+                    color: Color.fromARGB(255, 150, 147, 0),
+                    size: 30,
+                  ),
+                ],
+              ),
+              Image(
+                image: NetworkImage(
+                  'https://biblioteca.acropolis.org/wp-content/uploads/2022/05/simbolismo-buho.jpg',
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    'Oeschinen Lake Campground',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  Icon(
+                    Icons.star,
+                    color: Color.fromARGB(255, 194, 181, 0),
+                    size: 30.0,
+                  ),
+                  Text('4.1'),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Icon(Icons.phone, 
+                  color: Colors.blue, 
+                  size: 40),
+                  Icon(Icons.send, 
+                  color: Colors.blue, 
+                  size: 40),
+                  Icon(Icons.share, 
+                  color: Colors.blue, 
+                  size: 40),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    'CALL',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'ROUTE',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'SHARE',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+              Text(
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
+                style: TextStyle(fontSize: 12),
+                textAlign: TextAlign.justify,
+              ),
+              SizedBox(height: 15),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Icon(
+                    Icons.circle,
+                    color: Color.fromARGB(255, 229, 243, 33),
+                    size: 30,
+                  ),
+                  Icon(
+                    Icons.circle,
+                    color: Color.fromARGB(255, 0, 25, 165),
+                    size: 30,
+                  ),
+                  Icon(
+                    Icons.circle,
+                    color: Color.fromARGB(255, 243, 33, 33),
+                    size: 30,
+                  ),
+                  Icon(
+                    Icons.circle,
+                    color: Color.fromARGB(255, 75, 255, 84),
+                    size: 30,
+                  ),
+                ],
+              ),
+              SizedBox(height: 15),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Icon(Icons.add_shopping_cart, color: Colors.blue, size: 30),
+                  Icon(
+                    Icons.favorite,
+                    color: Color.fromARGB(255, 243, 33, 33),
+                    size: 30,
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
