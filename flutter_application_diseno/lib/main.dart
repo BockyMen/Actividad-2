@@ -13,7 +13,9 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: appTitle,
       home: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          title: const Text(appTitle),
+        ),
         body: const Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
